@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android labs</string>
+    <string name="app_name">Android lab 2</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="look_at_my_gui">Veja o meu GUI</string>
     <string name="click_here">CLICK AQUI</string>
