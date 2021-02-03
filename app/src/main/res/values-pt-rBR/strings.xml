@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android labs</string>
-    <string name="text" />
+    <string name="app_name">Android lab 2</string>
     <string name="toast_message">Mais informacoes aqui</string>
     <string name="snack_message">O switch agora e</string>
     <string name="undo_string"> Desfazer </string>

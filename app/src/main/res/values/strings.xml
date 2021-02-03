@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Android labs</string>
-    <string name="text" />
+    <string name="app_name">Android lab 2</string>
     <string name="toast_message">Here is more information</string>
     <string name="snack_message">The switch is now</string>
     <string name="undo_string">UNDO </string>
