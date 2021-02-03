@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android labs</string>
-    <string name="hello_message">Ola Mundo</string>
-    <string name="ButtonText">I\'m a button</string>
+    <string name="text" />
+    <string name="toast_message">Mais informacoes aqui</string>
+    <string name="snack_message">O switch agora e</string>
+    <string name="undo_string"> Desfazer </string>
+    <string name="look_at_my_gui">Veja o meu Gui</string>
+    <string name="click_here">Click Aqui</string>
+    <string name="type_here">Escreva Aqui</string>
+    <string name="switch_on_off">Chave on/off</string>
+    <string name="check_this_out">Saca so</string>
 </resources>
