@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/look_at_my_gui"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/click_here"
+        android:textColor="@color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toEndOf="@id/button"
+        android:text="@string/check_this_out" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkbox"
+        android:contentDescription="TODO"
+        android:src="@drawable/flag" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_toRightOf="@id/imageButton"
+        android:text="@string/switch_on_off" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageButton"
+        android:text="@string/type_here"
+        android:inputType="textPersonName"
+        android:layout_marginTop="0dp" />
+</RelativeLayout>
