@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_main_grid);
         setContentView(R.layout.activity_main_linear);
 
-        //TextView myText = findViewById(R.id.textView);
         Button button = findViewById(R.id.button);
         button.setOnClickListener(view -> toastMsg());
         Switch s = findViewById(R.id.switch1);
