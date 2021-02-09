@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         typeField.setText(prefs.getString("email", ""));
 
-        //Button saveButton = findViewById(R.id.button_Login);
-
-       // saveButton.setOnClickListener(bt -> saveSharedPrefs(typeField.getText().toString()));
-
-          }
+        }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginButton = findViewById(R.id.button_Login);
 
-        //loginButton.setOnClickListener(bt -> saveSharedPrefs(typeField.getText().toString()));
-
         //this creates a transition to load ProfileActivity.java:
         Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
-
-
 
         loginButton.setOnClickListener( click ->
                 {
