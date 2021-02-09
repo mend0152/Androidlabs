@@ -9,5 +9,15 @@
     <string name="type_here">Escreva aqui</string>
     <string name="snack_message">O swicth esta agora</string>
     <string name="toast_message">Mais informacoes aqui</string>
-
+    <string name="Enter_your_email_addr">Entre com seu e m-mail:</string>
+    <string name="type_email_here">Difite seu e-mail</string>
+    <string name="Type_your_passwd">Password</string>
+    <string name="Your_profile">Seu Perfil</string>
+    <string name="Your_name">Seu nome:</string>
+    <string name="Enter_name">Escreva o seu nome</string>
+    <string name="Your_email">Seu e-mail</string>
+    <string name="Enter_your_email">Entre com seu e-mail</string>
+    <string name="Your_picture">Sua foto</string>
+    <string name="button_above">Click no butao acima pra tirar uma foto</string>
+    <string name="login">ENTRAR</string>
 </resources>

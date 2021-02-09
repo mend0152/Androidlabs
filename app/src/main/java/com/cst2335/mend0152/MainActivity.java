@@ -2,9 +2,13 @@ package com.cst2335.mend0152;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,28 +17,61 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences prefs = null;
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        //loads FileName.xml
+        prefs = getSharedPreferences("FileName", Context.MODE_PRIVATE);
+
+        EditText typeField = findViewById(R.id.edit);
+
+        typeField.setText(prefs.getString("email", ""));
+
+        //Button saveButton = findViewById(R.id.button_Login);
+
+       // saveButton.setOnClickListener(bt -> saveSharedPrefs(typeField.getText().toString()));
+
+          }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main_relative);
-        //setContentView(R.layout.activity_main_grid);
-        setContentView(R.layout.activity_main_linear);
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(view -> toastMsg());
-        Switch s = findViewById(R.id.switch1);
-        s.setOnCheckedChangeListener((cb, isChecked) -> {
-            String snack_message = MainActivity.this.getResources().getString(R.string.snack_message);
-            Snackbar.make(cb, snack_message + " " + isChecked, Snackbar.LENGTH_LONG)
-            .setAction("Undo", click -> cb.setChecked(!isChecked)).show();
-        });
+        // setContentView loads objects onto the screen
+
+        setContentView(R.layout.activity_main_lab3);
+
+        prefs = getSharedPreferences("FileName", Context.MODE_PRIVATE);
+
+
+        EditText typeField = findViewById(R.id.edit);
+        typeField.setText(prefs.getString("email", ""));
+
+        Button loginButton = findViewById(R.id.button_Login);
+
+        //loginButton.setOnClickListener(bt -> saveSharedPrefs(typeField.getText().toString()));
+
+        //this creates a transition to load ProfileActivity.java:
+        Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
+
+
+
+        loginButton.setOnClickListener( click ->
+                {
+                    goToProfile.putExtra("typed", typeField.getText().toString());
+                    startActivity(goToProfile);
+                    saveSharedPrefs(typeField.getText().toString());
+                });
+
 
 
     }
-    public void toastMsg() {
 
-        String toast_message = MainActivity.this.getResources().getString(R.string.toast_message);
-        Toast.makeText(MainActivity.this, toast_message, Toast.LENGTH_LONG).show();
+    private void saveSharedPrefs(String EmailToSave) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("email", EmailToSave);
+        editor.commit();
     }
-
 }

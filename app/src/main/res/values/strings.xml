@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android lab 2</string>
+    <string name="app_name">Android lab 3</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="look_at_my_gui">Look at my Gui</string>
     <string name="click_here">CLICK HERE</string>
@@ -8,4 +8,16 @@
     <string name="type_here">Type Here</string>
     <string name="snack_message">The swicth is now</string>
     <string name="toast_message">Here is more infomration</string>
+    <string name="Enter_your_email_addr">Enter your email Address:</string>
+    <string name="type_email_here">Type email here</string>
+    <string name="Type_your_passwd">Type your password</string>
+    <string name="Your_profile">Your profile</string>
+    <string name="Your_name">Your name:</string>
+    <string name="Enter_name">Enter your name</string>
+    <string name="Your_email">Your Email:</string>
+    <string name="Enter_your_email">Enter your e-mail</string>
+    <string name="Your_picture">Your picture:</string>
+    <string name="button_above">Click the button above to take a picture</string>
+    <string name="login">LOGIN</string>
+
 </resources>
