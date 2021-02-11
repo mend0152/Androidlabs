@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
                     saveSharedPrefs(typeField.getText().toString());
                 });
 
-
-
     }
 
     private void saveSharedPrefs(String EmailToSave) {

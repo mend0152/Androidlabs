@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        ImageButton mImageButton = findViewById(R.id.imageButton2);
+        mImageButton = findViewById(R.id.imageButton2);
         mImageButton.setOnClickListener(click -> dispatchTakePictureIntent() );
 
         EditText emailTypeField = findViewById(R.id.edit1);
@@ -28,38 +28,38 @@ public class ProfileActivity extends AppCompatActivity {
         emailTypeField.setText(fromMain.getStringExtra("typed"));
 
 
-        Log.e(ACTIVITY_NAME,"In Function" + "onCreate");
+        Log.e(ACTIVITY_NAME,"In Function" + " onCreate");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(ACTIVITY_NAME,"In Function" + "onStart");
+        Log.e(ACTIVITY_NAME,"In Function" + " onStart");
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(ACTIVITY_NAME,"In Function" + "onResume");
+        Log.e(ACTIVITY_NAME,"In Function" + " onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(ACTIVITY_NAME,"In Function" + "onPause");
+        Log.e(ACTIVITY_NAME,"In Function" + " onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(ACTIVITY_NAME,"In Function" + "onStop");
+        Log.e(ACTIVITY_NAME,"In Function" + " onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(ACTIVITY_NAME,"In Function" + "onDestroy");
+        Log.e(ACTIVITY_NAME,"In Function" + " onDestroy");
     }
 
 
