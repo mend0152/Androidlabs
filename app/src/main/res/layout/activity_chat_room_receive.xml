@@ -5,19 +5,20 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageReceive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/row_receive" >
+        android:layout_width="109dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/boy"/>
 
-    </ImageButton>
 
     <TextView
         android:id="@+id/textViewReceive"
-        android:layout_width="286dp"
-        android:layout_height="match_parent">
+        android:layout_width="293dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent" />
 
-    </TextView>
+
 
 </LinearLayout>
