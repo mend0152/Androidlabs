@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android lab 2</string>
+    <string name="app_name">Android lab 4</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="look_at_my_gui">Veja o meu GUI</string>
     <string name="click_here">CLICK AQUI</string>
@@ -9,7 +9,7 @@
     <string name="type_here">Escreva aqui</string>
     <string name="snack_message">O swicth esta agora</string>
     <string name="toast_message">Mais informacoes aqui</string>
-    <string name="Enter_your_email_addr">Entre com seu e m-mail:</string>
+    <string name="Enter_your_email_addr">Entre com seu e-mail:</string>
     <string name="type_email_here">Difite seu e-mail</string>
     <string name="Type_your_passwd">Password</string>
     <string name="Your_profile">Seu Perfil</string>
@@ -20,4 +20,7 @@
     <string name="Your_picture">Sua foto</string>
     <string name="button_above">Click no butao acima pra tirar uma foto</string>
     <string name="login">ENTRAR</string>
+    <string name="GoToChat">Ir para o chat</string>
+    <string name="send">ENVIA</string>
+    <string name="receive">RECEBE</string>
 </resources>

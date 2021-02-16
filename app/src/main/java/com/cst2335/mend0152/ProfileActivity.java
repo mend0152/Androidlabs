@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -26,6 +27,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         Intent fromMain = getIntent();
         emailTypeField.setText(fromMain.getStringExtra("typed"));
+
+        Button chatButton = findViewById(R.id.gotochat);
+
+        //this creates a transition to load ProfileActivity.java:
+        Intent gotoChatRoomAct = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+
+        chatButton.setOnClickListener( click ->
+        {
+
+            startActivity(gotoChatRoomAct);
+
+        });
 
 
         Log.e(ACTIVITY_NAME,"In Function" + " onCreate");

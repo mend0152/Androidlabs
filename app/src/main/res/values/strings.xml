@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android lab 3</string>
+    <string name="app_name">Android lab 4</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="look_at_my_gui">Look at my Gui</string>
     <string name="click_here">CLICK HERE</string>
@@ -19,5 +19,9 @@
     <string name="Your_picture">Your picture:</string>
     <string name="button_above">Click the button above to take a picture</string>
     <string name="login">LOGIN</string>
+    <string name="GoToChat">Go to Chat</string>
+    <string name="send">SEND</string>
+    <string name="receive">RECEIVE</string>
+
 
 </resources>

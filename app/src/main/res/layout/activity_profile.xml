@@ -68,4 +68,10 @@
         android:text="@string/button_above"
         android:textSize="30sp" />
 
+    <Button
+        android:id="@+id/gotochat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/GoToChat" />
+
 </LinearLayout>
