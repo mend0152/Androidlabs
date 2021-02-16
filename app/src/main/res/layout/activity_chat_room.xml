@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    tools:context=".ChatRoomActivity">
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/TheChatView"
         android:layout_width="match_parent"
-        android:layout_height="506dp">
-
+        android:layout_height="wrap_content"
+        android:layout_weight="99">
     </ListView>
 
     <LinearLayout
@@ -18,30 +20,26 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/sendbutton"
+            android:id="@+id/lab4SendButton"
             android:layout_width="wrap_content"
-            android:layout_height="76dp"
-            android:layout_gravity="fill"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/send" />
+            android:text="@string/send"></Button>
 
         <EditText
             android:id="@+id/editTextChat"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="fill"
-            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_weight="98"
             android:hint="@string/type_here">
 
         </EditText>
 
         <Button
-            android:id="@+id/receivebutton"
+            android:id="@+id/lab4ReceiveButton"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="fill"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/receive" />
+            android:text="@string/receive"></Button>
     </LinearLayout>
-
 </LinearLayout>
