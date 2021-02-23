@@ -5,19 +5,24 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
+    <TextView
+        android:id="@+id/row_id"
+        android:layout_width="50dp"
+        android:layout_height="match_parent" />
+
     <ImageView
         android:id="@+id/imageReceive"
         android:layout_width="109dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/boy"/>
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/boy" />
 
 
     <TextView
         android:id="@+id/textViewReceive"
-        android:layout_width="293dp"
-        android:layout_weight="5"
-        android:layout_height="match_parent" />
+        android:layout_width="249dp"
+        android:layout_height="match_parent"
+        />
+
 
 
 
