@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android lab 4</string>
+    <string name="app_name">Android lab</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="look_at_my_gui">Look at my Gui</string>
     <string name="click_here">CLICK HERE</string>
@@ -22,6 +22,7 @@
     <string name="GoToChat">Go to Chat</string>
     <string name="send">SEND</string>
     <string name="receive">RECEIVE</string>
+    <string name="GoToWeather">Weather Forecast</string>
 
 
 </resources>
