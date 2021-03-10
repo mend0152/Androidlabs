@@ -49,7 +49,8 @@ public class WeatherForecast extends AppCompatActivity {
         String value = "";
         String fName = "";
         String urlString = "";
-        Bitmap image = null;
+        Bitmap image;
+        Bitmap bm;
 
         //Type3                Type1
         public String doInBackground(String ... args)
@@ -132,7 +133,7 @@ public class WeatherForecast extends AppCompatActivity {
                     FileInputStream fis = null;
                     try {    fis = openFileInput(fName);   }
                     catch (FileNotFoundException e) {    e.printStackTrace();  }
-                    Bitmap bm = BitmapFactory.decodeStream(fis);
+                    bm = BitmapFactory.decodeStream(fis);
 
                 }
 
@@ -193,9 +194,12 @@ public class WeatherForecast extends AppCompatActivity {
             curTemp.setText("The current temperature is: " + value + " Celcius");
             TextView uvRat = findViewById(R.id.uvRating);
             uvRat.setText("The UV Rating is: " + String.valueOf(uvRating));
-
             ImageView view = findViewById(R.id.currentWeather);
-            view.setImageBitmap(image);
+            if ( image == null) {
+                //ImageView view = findViewById(R.id.currentWeather);
+                view.setImageBitmap(bm);
+            }else
+                view.setImageBitmap(image);
 
             Log.i("HTTP", fromDoInBackground);
             ProgressBar someProgressBar = findViewById(R.id.progressBar);
