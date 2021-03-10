@@ -30,13 +30,25 @@ public class ProfileActivity extends AppCompatActivity {
 
         Button chatButton = findViewById(R.id.gotochat);
 
-        //this creates a transition to load ProfileActivity.java:
+        //this creates a transition to load ChatRoomActivity.java:
         Intent gotoChatRoomAct = new Intent(ProfileActivity.this, ChatRoomActivity.class);
 
         chatButton.setOnClickListener( click ->
         {
 
             startActivity(gotoChatRoomAct);
+
+        });
+
+        Button weatherButton = findViewById(R.id.gotoWeather);
+
+        //this creates a transition to load WeatherForecast.java:
+        Intent gotoWeatherForecast = new Intent(ProfileActivity.this, WeatherForecast.class);
+
+        weatherButton.setOnClickListener( click ->
+        {
+
+            startActivity(gotoWeatherForecast);
 
         });
 
