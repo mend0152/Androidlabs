@@ -111,7 +111,7 @@ public class WeatherForecast extends AppCompatActivity {
 
                 //the code below is to download the Bitmap code
                 if( !fileExistance(fName) ) {
-                    Log.i("", "The file will be downloaded" + fName);
+                    Log.i("download", "The file will be downloaded " + fName);
                     URL urlBitmap = new URL(urlString);
                     HttpURLConnection connection = (HttpURLConnection) urlBitmap.openConnection();
                     connection.connect();
@@ -129,7 +129,7 @@ public class WeatherForecast extends AppCompatActivity {
                     }
                 } else {
                     //If the Image file exists, then you don’t need to re-download it, just read it from your disk
-                    Log.i("", "The file has found" + fName);
+                    Log.i("found", "The file has found " + fName);
                     FileInputStream fis = null;
                     try {    fis = openFileInput(fName);   }
                     catch (FileNotFoundException e) {    e.printStackTrace();  }
@@ -209,9 +209,10 @@ public class WeatherForecast extends AppCompatActivity {
 
     public boolean fileExistance (String fname){
         File[] allFiles = getFilesDir().listFiles();
-        Log.i("", "looking for the file named:" + fname);
+        Log.i("looking", "looking for the file named: " + fname);
         File file = getBaseContext().getFileStreamPath(fname);
         return file.exists();
+
     }
 
 }

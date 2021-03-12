@@ -23,6 +23,12 @@
     <string name="send">SEND</string>
     <string name="receive">RECEIVE</string>
     <string name="GoToWeather">Weather Forecast</string>
+    <string name="MinTemp">The min temperature is :</string>
+    <string name="MaxTemp">The max temperature is :</string>
+    <string name="currTemp">The current temperature is :</string>
+    <string name="uvRating">Th UV rating is:</string>
+    <string name="celcius">Celcius</string>
+
 
 
 </resources>
