@@ -187,13 +187,14 @@ public class WeatherForecast extends AppCompatActivity {
         public void onPostExecute(String fromDoInBackground)
         {
             TextView minTemp = findViewById(R.id.minTemperature);
-            minTemp.setText("The min temperature is: " + min + " Celcius");
+            minTemp.setText(getString(R.string.minTemp) + min + getString(R.string.celcius));
+            //minTemp.setText("@string/minTemp" + min );
             TextView maxTemp = findViewById(R.id.maxTemperature);
-            maxTemp.setText("The max temperature is: " + max + " Celcius");
+            maxTemp.setText(getString(R.string.maxTemp) + max + getString(R.string.celcius));
             TextView curTemp = findViewById(R.id.currentTemperature);
-            curTemp.setText("The current temperature is: " + value + " Celcius");
+            curTemp.setText(getString(R.string.currTemp)  + value + getString(R.string.celcius));
             TextView uvRat = findViewById(R.id.uvRating);
-            uvRat.setText("The UV Rating is: " + String.valueOf(uvRating));
+            uvRat.setText(getString(R.string.uvRating) + String.valueOf(uvRating));
             ImageView view = findViewById(R.id.currentWeather);
             if ( image == null) {
                 //ImageView view = findViewById(R.id.currentWeather);

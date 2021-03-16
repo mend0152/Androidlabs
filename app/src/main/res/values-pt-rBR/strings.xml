@@ -24,10 +24,10 @@
     <string name="send">ENVIA</string>
     <string name="receive">RECEBE</string>
     <string name="GoToWeather">Previsao do tempo</string>
-    <string name="MinTemp">A temepratura minima e :</string>
-    <string name="MaxTemp">A maxima temperatura e :</string>
-    <string name="currTemp">A temperatura atual e :</string>
-    <string name="uvRating">A media de rios UV e :</string>
-    <string name="celcius">Celcius</string>
+    <string name="minTemp"> A temepratura minima e : </string>
+    <string name="maxTemp"> A temperatura maxima e : </string>
+    <string name="currTemp"> A temperatura atual e : </string>
+    <string name="uvRating"> A media de raios UV e : </string>
+    <string name="celcius"> Celcius</string>
 
 </resources>

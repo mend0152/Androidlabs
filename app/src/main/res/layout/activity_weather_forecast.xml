@@ -30,25 +30,25 @@
             android:id="@+id/currentTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/currTemp" />
 
         <TextView
             android:id="@+id/minTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/minTemp" />
 
         <TextView
             android:id="@+id/maxTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/maxTemp" />
 
         <TextView
             android:id="@+id/uvRating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/uvRating" />
 
 
 
