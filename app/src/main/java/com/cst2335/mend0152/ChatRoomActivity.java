@@ -11,9 +11,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
+
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +31,15 @@ public class ChatRoomActivity extends AppCompatActivity {
     MyListAdapter myAdapter;
     Message object;
     SQLiteDatabase db;
+    DetailFragment dFragment;
+
+    private AppCompatActivity parentActivity;
+
+    public static final String ITEM_SELECTED = "ITEM";
+    public static final String ITEM_POSITION = "POSITION";
+    public static final String ITEM_ID = "ID";
+    public static  final boolean IS_SENT = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,19 +50,46 @@ public class ChatRoomActivity extends AppCompatActivity {
         //initialize the list
         myAdapter = new MyListAdapter();
 
+        //retrieve the FrameLayout
+        FrameLayout frame = findViewById(R.id.frameLayout);
+
+
         //retrieve the ListView from .xml
-        ListView myList = findViewById(R.id.TheChatView);
+        ListView myList = findViewById(R.id.chatListView);
         myList.setAdapter( myAdapter );
+
+        boolean isTablet = findViewById(R.id.frameLayout) != null;//check if the FrameLayout is loaded
 
         //Click listener for ListView
         myList.setOnItemClickListener( (par, view, pos, id) -> {
+
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString(ITEM_SELECTED, messageList.get(pos).getMessage() );
+            dataToPass.putInt(ITEM_POSITION, pos);
+            dataToPass.putLong(ITEM_ID, id);
+            dataToPass.putBoolean(String.valueOf(IS_SENT), messageList.get(pos).getIsSend());
+
+                    if(isTablet) {
+                        dFragment = new DetailFragment(); // add a detailFragment
+                        dFragment.setArguments( dataToPass ); //pass it a bundle for information
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.frameLayout, dFragment) //Add the fragment in FrameLayout
+                                .commit(); //actually load the fragment. Calls onCreate() in DetailFragment
+                    }
+                    else //isPhone
+                    {
+                        Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                        nextActivity.putExtras(dataToPass); //send data to next activity
+                        startActivity(nextActivity); //make the transition
+                    }
             showMessage( pos );
         });
 
         //retrieving buttons and Edit Text
-        Button sendButton = findViewById(R.id.lab4SendButton);
-        Button receiveButton = findViewById(R.id.lab4ReceiveButton);
-        EditText typeMessage = findViewById(R.id.editTextChat);
+        Button sendButton = findViewById(R.id.lab4_sendButton);
+        Button receiveButton = findViewById(R.id.lab4_receiveButton);
+        EditText typeMessage = findViewById(R.id.lab4_typedMessage);
 
         sendButton.setOnClickListener(click->{
             String Message = typeMessage.getText().toString();
@@ -197,6 +236,15 @@ public class ChatRoomActivity extends AppCompatActivity {
                     myAdapter.notifyDataSetChanged(); //there is one less item so update the list
                 })
                 .setNeutralButton("dismiss", (click, b) -> { })
+                .setPositiveButton("Delete and Close", (click, b) -> {
+                    deleteContact(selectedMessage); //remove the contact from database
+                    messageList.remove(position); //remove the contact from contact list
+                    myAdapter.notifyDataSetChanged(); //there is one less item so update the list
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .remove(dFragment) //remove the fragment in FrameLayout
+                            .commit(); //actually load the fragment. Calls onCreate() in DetailFragment
+                })
                 .create().show();
     }
 

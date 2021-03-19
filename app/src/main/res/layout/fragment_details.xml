@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment"
+    android:id="@+id/frame_layout">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:id="@+id/frame_relativeLayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:id="@+id/fragment_message_here"
+           android:layout_width="174dp"
+           android:layout_height="38dp"
+           android:text="@string/message_here" />
+
+       <TextView
+           android:id="@+id/fragment_id"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/fragment_message_here"
+           android:text="ID=" />
+
+       <CheckBox
+           android:id="@+id/fragment_checkBox"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/fragment_id"
+           android:text="@string/is_a_send_message" />
+
+       <Button
+           android:id="@+id/fragment_button"
+           android:layout_width="1000dp"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:text="HOME" />
+
+   </RelativeLayout>
+
+
+
+
+</FrameLayout>
