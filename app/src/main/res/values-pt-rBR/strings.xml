@@ -29,8 +29,14 @@
     <string name="currTemp"> A temperatura atual e : </string>
     <string name="uvRating"> A media de raios UV e : </string>
     <string name="celcius"> Celcius</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="message_here">Mensagem aqui</string>
     <string name="is_a_send_message"> Is a send message</string>
+    <string name="GoToToolbar"> Va para Toolbar page</string>
+    <string name="about_icon">Sobre</string>
+    <string name="home_icon">Casa</string>
+    <string name="message_icon">Mensagem</string>
+    <string name="search_icon">Buscar</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
 
 </resources>

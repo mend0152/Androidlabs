@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/boy"
+        android:title="@string/about_icon"
+        android:icon="@drawable/boy"
+        android:orderInCategory="75"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/flag"
+        android:title="@string/home_icon"
+        android:icon="@drawable/flag"
+        android:orderInCategory="50"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/message"
+        android:title="@string/home_icon"
+        android:icon="@drawable/row_receive"
+        android:orderInCategory="50"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/overflow"
+        android:title="@string/message_icon"
+        android:icon="@drawable/girl"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/search_item"
+        android:orderInCategory="1"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@android:drawable/ic_search_category_default"
+        app:showAsAction="always|collapseActionView"
+        android:title="@string/search_icon"/>
+
+</menu>

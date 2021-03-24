@@ -28,9 +28,14 @@
     <string name="currTemp"> The current temperature is : </string>
     <string name="uvRating"> Th UV rating is : </string>
     <string name="celcius"> Celcius </string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="message_here">Message here</string>
     <string name="is_a_send_message"> Is a send message</string>
-
+    <string name="GoToToolbar"> Go to Toolbar page</string>
+    <string name="about_icon">about</string>
+    <string name="home_icon">home</string>
+    <string name="message_icon">message</string>
+    <string name="search_icon">search</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 </resources>
