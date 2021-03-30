@@ -32,11 +32,13 @@
     <string name="message_here">Mensagem aqui</string>
     <string name="is_a_send_message"> Is a send message</string>
     <string name="GoToToolbar"> Va para Toolbar page</string>
-    <string name="about_icon">Sobre</string>
-    <string name="home_icon">Casa</string>
-    <string name="message_icon">Mensagem</string>
-    <string name="search_icon">Buscar</string>
+    <string name="boy_icon">boy</string>
+    <string name="flag_icon">flag</string>
+    <string name="message_icon">message</string>
+    <string name="girl_icon">girl</string>
+    <string name="look_icon">look to the message</string>
     <string name="open">Abrir</string>
     <string name="close">Fechar</string>
+    <string name="search">Search</string>
 
 </resources>

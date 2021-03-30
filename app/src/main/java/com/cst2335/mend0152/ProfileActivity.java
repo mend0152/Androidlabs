@@ -116,6 +116,9 @@ public class ProfileActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
         }
+        if (resultCode == 500){
+            finish();
+        }
     }
 
 }

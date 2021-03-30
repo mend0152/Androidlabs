@@ -1,9 +1,11 @@
 package com.cst2335.mend0152;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,7 +26,7 @@ public class TestToolbar extends AppCompatActivity {
         setContentView(R.layout.activity_test_toolbar);
 
         //This gets the toolbar from the layout:
-        Toolbar tBar = findViewById(R.id.my_toolbar);
+        Toolbar tBar = findViewById(R.id.toolbar);
 
         //This loads the toolbar, which calls onCreateOptionsMenu below:
         setSupportActionBar(tBar);
@@ -36,8 +38,8 @@ public class TestToolbar extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-     //   NavigationView navigationView = findViewById(R.id.nav_view);
-     //   navigationView.setNavigationItemSelectedListener(this);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
     }
 
     @Override
@@ -48,20 +50,22 @@ public class TestToolbar extends AppCompatActivity {
 
 
 	     //slide 15 material:
-	    MenuItem searchItem = menu.findItem(R.id.search_item);
-        SearchView sView = (SearchView)searchItem.getActionView();
-        sView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-            });
-
-        return true;
+        //Then add 2 callback functions in onCreateOptionsMenu. One function is for the text changing,
+        //the other is when you press the search button (magnifying glass)
+//	    MenuItem searchItem = menu.findItem(R.id.search_item);
+//        SearchView sView = (SearchView)searchItem.getActionView();
+//        sView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return true;
+//            }
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                return false;
+//            }
+//            });
+//
+           return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -82,33 +86,47 @@ public class TestToolbar extends AppCompatActivity {
             case R.id.overflow:
                 message = "You clicked on overflow";
                 break;
+            case R.id.search_item:
+                message = "You clicked on the search";
+                break;
         }
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
         return true;
     }
 
     // Needed for the OnNavigationItemSelected interface:
-    //@Override
     public boolean onNavigationItemSelected( MenuItem item) {
 
         String message = null;
 
         switch(item.getItemId())
         {
-            case R.id.boy:
-                message = "You clicked on boy";
+        //what to do when the menu item is selected:
+
+            case R.id.idChat:
+                //this creates a transition to load WeatherForecast.java:
+                message = "Chat messages";
+                Intent gotoChat = new Intent(TestToolbar.this, ChatRoomActivity.class);
+                startActivity(gotoChat);
                 break;
-            case R.id.flag:
-                message = "You clicked on flag";
+            case R.id.idWeather:
+                //this creates a transition to load WeatherForecast.java:
+                message = "Weather Activity";
+                Intent gotoWeatherForecast = new Intent(TestToolbar.this, WeatherForecast.class);
+                startActivity(gotoWeatherForecast);
                 break;
-            case R.id.message:
-                message = "You clicked on message";
-                break;
-            case R.id.overflow:
-                message = "You clicked on overflow";
+            case R.id.idLogin:
+                //this creates a transition to load WeatherForecast.java:
+                Intent gotoProfile = new Intent(TestToolbar.this, ProfileActivity.class);
+                //startActivity(gotoProfile);
+
+                setResult(500, gotoProfile);
+                startActivityForResult(gotoProfile, RESULT_OK);
+                finish();
+
                 break;
         }
-
+//
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
 
