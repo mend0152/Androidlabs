@@ -59,7 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
         toolbarButton.setOnClickListener( click ->
         {
 
-            startActivity(gotoTestToolbar);
+            startActivityForResult(gotoTestToolbar, 500);
 
         });
 
@@ -116,7 +116,7 @@ public class ProfileActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
         }
-        if (resultCode == 500){
+        if (requestCode == 500){
             finish();
         }
     }

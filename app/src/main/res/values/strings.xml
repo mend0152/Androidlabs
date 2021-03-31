@@ -39,5 +39,10 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="search">Search</string>
+    <string name="hello_message">Hello</string>
+    <string name="lab3_emailText">Enter your Email Address:</string>
+    <string name="lab3_typeEmail">Type Email Here</string>
+    <string name="lab3_passwordText">Type your password:</string>
+    <string name="lab3_login">Login</string>
 
 </resources>

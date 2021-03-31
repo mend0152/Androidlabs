@@ -116,12 +116,8 @@ public class TestToolbar extends AppCompatActivity {
                 startActivity(gotoWeatherForecast);
                 break;
             case R.id.idLogin:
-                //this creates a transition to load WeatherForecast.java:
-                Intent gotoProfile = new Intent(TestToolbar.this, ProfileActivity.class);
-                //startActivity(gotoProfile);
-
-                setResult(500, gotoProfile);
-                startActivityForResult(gotoProfile, RESULT_OK);
+                message = "Back to the login";
+                //this finishes the application toolbar and return to the previous page
                 finish();
 
                 break;
