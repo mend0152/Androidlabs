@@ -10,7 +10,7 @@
     <string name="snack_message">O swicth esta agora</string>
     <string name="toast_message">Mais informacoes aqui</string>
     <string name="Enter_your_email_addr">Entre com seu e-mail:</string>
-    <string name="type_email_here">Difite seu e-mail</string>
+    <string name="type_email_here">Digite seu e-mail</string>
     <string name="Type_your_passwd">Password</string>
     <string name="Your_profile">Seu Perfil</string>
     <string name="Your_name">Seu nome:</string>
@@ -40,5 +40,10 @@
     <string name="open">Abrir</string>
     <string name="close">Fechar</string>
     <string name="search">Search</string>
+    <string name="hello_message">Hello</string>
+    <string name="lab3_emailText">Entre com seu e-mail:</string>
+    <string name="lab3_typeEmail">Digite seu e-mail</string>
+    <string name="lab3_passwordText">Password:</string>
+    <string name="lab3_login">Login</string>
 
 </resources>
